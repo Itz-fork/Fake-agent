@@ -9,6 +9,14 @@ from .types import Browsers
 
 
 class Fake_Agent:
+    """
+    Fake_Agent class
+
+    ### Arguments
+
+        - `browser` :Enum (optional) - Enum of the rowser that you want to use (from FakeAgent.types import Browsers)
+        - `load_on_init` :bool (optional) - Whether you want to load json file to memory on init
+    """
     def __init__(self, browser: Enum = Browsers.FIREFOX, load_on_init: bool = True) -> None:
         self.browser = browser
         # Json file
