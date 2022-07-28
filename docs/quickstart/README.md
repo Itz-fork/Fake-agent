@@ -1,5 +1,4 @@
-# Fake agent
-
+# Fake Agent
 ```python
 from FakeAgent import Fake_Agent
 
@@ -7,4 +6,4 @@ fa = Fake_Agent()
 print(fa.random())
 ```
 
-Generate fake user agents easily!
+**Fake-agent**, generate fake browser user agents without a hassle!
