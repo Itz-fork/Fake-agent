@@ -1,4 +1,5 @@
 # Copyright (c) 2022 Itz-fork
+
 import os
 import requests
 
@@ -53,10 +54,8 @@ class Fake_Agent:
             - `mix_browsers` :bool (optional) - To randomly select a browser. Defaults to `True`
             - `with_details` :bool (optional) - To get user agent details. Defaults to False (INTERNET REQUIRED)
         """
-        us_brw = choice(self._get_supported_browsers()
-                        ) if mix_browsers else self.browser.value
-        brdict = self.json_file if self.json_file else self._read_json_as_dict(
-            f"{self.data_location}{us_brw}.json")
+        brdict = self._read_json_as_dict(
+            f"{self.data_location}{choice(self._get_supported_browsers())}.json") if mix_browsers else self.json_file
         chosen = choice(list(brdict.values()))
         return self._get_ua_data(chosen) if with_details else chosen
 

@@ -6,21 +6,21 @@ fa = Fake_Agent()
 print(fa.random())
 ```
 
-**Generate fake user agents on the fly!**
+**Fake-agent**, generate fake browser user agents without a hassle!
 
 
-## Links
-- [Documentation](https://itz-fork.github.io/Fake-agent)
-- [Features](#features)
-- [Installation](#install)
-- [Usage](#usage)
-- [License](#license)
+## Links 🔗
+- [Documentation 📔](https://itz-fork.github.io/Fake-agent)
+- [Features 💪](#features-)
+- [Installation ⬇️](#install-)
+- [Usage 🤔](#usage-)
+- [License 👮](#license-)
 
 
 ## Features
 - Easy to use
 - Works offline
-- No need of 3rd party packages
+- No need to install bunch of 3rd party packages
 
 
 ## Install

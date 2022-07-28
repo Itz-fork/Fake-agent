@@ -1,5 +1,4 @@
 # Installation
-
 - [Stable](#stable)
 - [Bleeding edge](#bleeding-edge)
 

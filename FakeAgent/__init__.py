@@ -1,5 +1,5 @@
 # Copyright (c) 2022 Itz-fork
 
-from .faker import Fake_Agent
+from .agent import Fake_Agent
 
-__version__ = "v0.1.1"
+__version__ = "v0.1.2"
