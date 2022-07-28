@@ -1,15 +1,29 @@
 # Fake Agent
-Generate fake user agents on the fly
+```python
+from FakeAgent import Fake_Agent
+
+fa = Fake_Agent()
+print(fa.random())
+```
+
+**Generate fake user agents on the fly**
 
 
-# Features
+## Table of content
+- [Documentation](https://itz-fork.github.io/Fake-agent)
+- [Features](#features)
+- [Installation](#install)
+- [Usage](#usage)
+- [License](#license)
+
+
+## Features
 - Easy to use
 - Works offline
 - No need of 3rd party packages
 
 
-# Install
-
+## Install
 - Via pip
     ```
     pip3 install fake-agent
@@ -20,8 +34,8 @@ Generate fake user agents on the fly
     ```
 
 
-# Usage
-For more detailed explanation, visit [method documentation](https://me.itz-fork.xyz/Fake-agent/#/methods/README)
+## Usage
+For more methods and detailed explanation, visit [method documentation](https://itz-fork.github.io/Fake-agent/#/methods/README)
 
 
 **Import and initialize the `Fake_Agent` class**
@@ -33,11 +47,11 @@ fa = Fake_Agent()
 ```
 
 - `get()` - Get user agents as a list or generator according to the browser that Fake_Agent class initialized with
-    - For more info visit - [Fake_Agent.get documentation](https://me.itz-fork.xyz/Fake-agent/#/methods/get)
+    - For more info visit - [Fake_Agent.get documentation](https://itz-fork.github.io/Fake-agent/#/methods/get)
 
 - `random()` - Randomly select user agent
-    - For more info visit - [Fake_Agent.random documentation](https://me.itz-fork.xyz/Fake-agent/#/methods/random)
+    - For more info visit - [Fake_Agent.random documentation](https://itz-fork.github.io/Fake-agent/#/methods/random)
 
 
-# License
+## License
 Licensed under [MIT License](LICENSE)

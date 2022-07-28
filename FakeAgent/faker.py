@@ -29,12 +29,12 @@ class Fake_Agent:
 
     def get(self, browser: Enum = None, as_gen: bool = False):
         """
-        Get user agents as a list or generator according to the browser that Fake_Agent class initialized with
+        Get user agents as a list or generator according to the browser that `Fake_Agent` class initialized with
 
         ### Arguments
 
-            - `browser` :Enum (optional) - Pass Browser enum if you want to get user agents of a specific browser rather than the one you initialized the Fake_Agent class with
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `browser` :Enum (optional) - Enum of the browser you want to get user agents. Defaults to the browser that Fake_Agent class initialized with
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
         to_use = browser.value if browser else self.browser.value
         vl = self.json_file if self.json_file else self._read_json_as_dict(
@@ -50,8 +50,8 @@ class Fake_Agent:
 
         ### Arguments
 
-            - `mix_browsers` :bool (optional) - Pass "True" if you want to randomly select browser too
-            - `with_details` :bool (optional) - Pass "True" if you need to get user agent details (INTERNET REQUIRED)
+            - `mix_browsers` :bool (optional) - To randomly select a browser. Defaults to `True`
+            - `with_details` :bool (optional) - To get user agent details. Defaults to False (INTERNET REQUIRED)
         """
         us_brw = choice(self._get_supported_browsers()
                         ) if mix_browsers else self.browser.value
