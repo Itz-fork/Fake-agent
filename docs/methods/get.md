@@ -2,12 +2,12 @@
 Get user agents as a list or generator according to the browser that `Fake_Agent` class initialized with
 
 
-### Arguments
+## Arguments
 - `browser` :Enum (optional) - Enum of the browser you want to get user agents. Defaults to the browser that Fake_Agent class initialized with
 - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
 
 
-### Examples
+## Examples
 - Get user agents of current browser
     ```python
     from FakeAgent import Fake_Agent

@@ -2,12 +2,12 @@
 Randomly select user agent
 
 
-### Arguments
+## Arguments
 - `mix_browsers` :bool (optional) - To randomly select a browser. Defaults to `True`
 - `with_details` :bool (optional) - To get user agent details (INTERNET REQUIRED). Defaults to `False`
 
 
-### Examples
+## Examples
 - Select random user agent of current browser with it's details
     ```python
     from FakeAgent import Fake_Agent
