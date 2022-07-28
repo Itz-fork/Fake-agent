@@ -21,7 +21,7 @@ Generate fake user agents on the fly
 
 
 # Usage
-For more detailed explanation, visit [documentation on usage](https://itz-fork.github.io/Fake-agent/#/usage)
+For more detailed explanation, visit [functions documentation](https://me.itz-fork.xyz/Fake-agent/#/functions/README)
 
 
 **Import and initialize the `Fake_Agent` class**
@@ -32,12 +32,11 @@ from FakeAgent import Fake_Agent
 fa = Fake_Agent()
 ```
 
-
 - `get()` - Get user agents as a list or generator according to the browser that Fake_Agent class initialized with
-    - For more info visit - [Fake_Agent.get documentation](https://itz-fork.github.io/Fake-agent/#/get)
+    - For more info visit - [Fake_Agent.get documentation](https://me.itz-fork.xyz/Fake-agent/#/functions/get)
 
 - `random()` - Randomly select user agent
-    - For more info visit - [Fake_Agent.random documentation](https://itz-fork.github.io/Fake-agent/#/random)
+    - For more info visit - [Fake_Agent.random documentation](https://me.itz-fork.xyz/Fake-agent/#/functions/random)
 
 
 # License
