@@ -21,6 +21,6 @@ fa = Fake_Agent()
 ## Methods
 `Fake_Agent` class consist of following methods
 
-- [`get`](get.md)
-- [`random`](random.md)
-- [`browser specific methods`](browser_methods.md)
+- [`get`](./get.md)
+- [`random`](./random.md)
+- [`browser specific methods`](./browser_methods.md)

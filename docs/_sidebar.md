@@ -7,4 +7,4 @@
     - [Fake_Agent class](methods/README.md)
     - [get](methods/get.md)
     - [random](methods/random.md)
-    - [`browser specific methods`](methods/browser_methods.md)
+    - [browser specific methods](methods/browser_methods.md)
