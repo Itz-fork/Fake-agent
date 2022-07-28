@@ -1,4 +1,5 @@
 scrapers
 tests
 dist
+pypi.sh
 fake_agent.egg-info
