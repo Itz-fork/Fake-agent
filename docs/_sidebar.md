@@ -1,9 +1,10 @@
 - Getting started
 
-    - [About](pages/homepage.md)
-    - [Install](pages/install.md)
+    - [About](quickstart/README.md)
+    - [Install](quickstart/install.md)
 
 
 - API
 
-    - [get](pages/api/get.md)
+    - [Functions](functions/README.md)
+    - [get](functions/get.md)
