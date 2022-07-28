@@ -1,1 +1,1 @@
-# Functions
+# methods

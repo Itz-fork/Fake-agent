@@ -1,11 +1,9 @@
 - Getting started
-
     - [About](quickstart/README.md)
     - [Install](quickstart/install.md)
 
 
 - API
-
-    - [Functions](functions/README.md)
-    - [get](functions/get.md)
-    - [random](functions/random.md)
+    - [Methods](methods/README.md)
+    - [get](methods/get.md)
+    - [random](methods/random.md)

@@ -21,10 +21,11 @@ class Fake_Agent:
     def __init__(self, browser: Enum = Browsers.FIREFOX, load_on_init: bool = True) -> None:
         self.browser = browser
         # Json file
+        self.data_location = f"{os.path.dirname(__file__)}/data/"
         self.json_file = None
         if load_on_init:
             self.json_file = self._read_json_as_dict(
-                f"{os.path.dirname(__file__)}/data/{self.browser.value}.json")
+                f"{self.data_location}{self.browser.value}.json")
 
     def get(self, browser: Enum = None, as_gen: bool = False):
         """
@@ -37,11 +38,27 @@ class Fake_Agent:
         """
         to_use = browser.value if browser else self.browser.value
         vl = self.json_file if self.json_file else self._read_json_as_dict(
-            f"{os.path.dirname(__file__)}/data/{to_use}.json")
+            f"{self.data_location}{to_use}.json")
         if as_gen:
             return (val for val in vl.values())
         else:
             return [val for val in vl.values()]
+
+    def random(self, mix_browsers: bool = True, with_details: bool = False):
+        """
+        Randomly select user agent
+
+        ### Arguments
+
+            - `mix_browsers` :bool (optional) - Pass "True" if you want to randomly select browser too
+            - `with_details` :bool (optional) - Pass "True" if you need to get user agent details (INTERNET REQUIRED)
+        """
+        us_brw = choice(self._get_supported_browsers()
+                        ) if mix_browsers else self.browser.value
+        brdict = self.json_file if self.json_file else self._read_json_as_dict(
+            f"{self.data_location}{us_brw}.json")
+        chosen = choice(list(brdict.values()))
+        return self._get_ua_data(chosen) if with_details else chosen
 
     def chrome(self, as_gen: bool = False):
         """
@@ -102,22 +119,6 @@ class Fake_Agent:
             - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
         """
         return self.get(Browsers.IE, as_gen)
-
-    def random(self, mix_browsers: bool = True, with_details: bool = False):
-        """
-        Randomly select user agent
-
-        ### Arguments
-
-            - `mix_browsers` :bool (optional) - Pass "True" if you want to randomly select browser too
-            - `with_details` :bool (optional) - Pass "True" if you need to get user agent details (INTERNET REQUIRED)
-        """
-        us_brw = choice(self._get_supported_browsers()
-                        ) if mix_browsers else self.browser.value
-        brdict = self.json_file if self.json_file else self._read_json_as_dict(
-            f"{os.path.dirname(__file__)}/data/{us_brw}.json")
-        chosen = choice(list(brdict.values()))
-        return self._get_ua_data(chosen) if with_details else chosen
 
     def _get_supported_browsers(self):
         return [v.value for k, v in Browsers.__dict__.items() if k.isupper()]
