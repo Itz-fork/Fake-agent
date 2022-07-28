@@ -6,10 +6,10 @@ fa = Fake_Agent()
 print(fa.random())
 ```
 
-**Generate fake user agents on the fly**
+**Generate fake user agents on the fly!**
 
 
-## Table of content
+## Links
 - [Documentation](https://itz-fork.github.io/Fake-agent)
 - [Features](#features)
 - [Installation](#install)
@@ -24,13 +24,13 @@ print(fa.random())
 
 
 ## Install
-- Via pip
+- Stable
     ```
     pip3 install fake-agent
     ```
-- Via source
+- Bleeding edge
     ```
-    pip3 install git+https://github.com/Itz-fork/Fake-agent.git
+    pip3 install -U https://github.com/Itz-fork/Fake-agent/archive/master.zip
     ```
 
 
