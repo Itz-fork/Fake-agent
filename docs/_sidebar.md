@@ -8,3 +8,4 @@
 
     - [Functions](functions/README.md)
     - [get](functions/get.md)
+    - [random](functions/random.md)
