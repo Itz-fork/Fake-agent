@@ -17,13 +17,13 @@ print(fa.random())
 - [License 👮](#license-)
 
 
-## Features
+## Features 💪
 - Easy to use
 - Works offline
 - No need to install bunch of 3rd party packages
 
 
-## Install
+## Install ⬇️
 - Stable
     ```
     pip3 install fake-agent
@@ -34,7 +34,7 @@ print(fa.random())
     ```
 
 
-## Usage
+## Usage 🤔
 For more methods and detailed explanation, visit [method documentation](https://itz-fork.github.io/Fake-agent/#/methods/README)
 
 
@@ -53,5 +53,5 @@ fa = Fake_Agent()
     - For more info visit - [Fake_Agent.random documentation](https://itz-fork.github.io/Fake-agent/#/methods/random)
 
 
-## License
+## License 👮
 Licensed under [MIT License](LICENSE)
