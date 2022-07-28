@@ -5,7 +5,7 @@ Generate fake user agents on the fly
 # Features
 - Easy to use
 - Works offline
-- No need of external packages
+- No need of 3rd party packages
 
 
 # Install
