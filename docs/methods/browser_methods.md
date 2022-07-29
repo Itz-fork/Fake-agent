@@ -1,12 +1,10 @@
 # Browser specific methods
 These methods are used to get user agents of a specific browser easily. Under the hood it calls [`get`](get.md) method with relavant enum for the browser.
 
-
 ## Arguments
 All of thse methods accept following arguments,
 
 - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
-
 
 ## Methods
 - `chrome` - Returns the user agents of the google chrome browser
