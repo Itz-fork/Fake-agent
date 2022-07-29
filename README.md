@@ -24,11 +24,11 @@ print(fa.random())
 
 
 ## Install ⬇️
-- Stable
+- Stable from [pypi](https://pypi.org/project/fake-agent)
     ```
     pip3 install fake-agent
     ```
-- Bleeding edge
+- Bleeding edge from [github](https://github.com/Itz-fork/Fake-agent)
     ```
     pip3 install -U https://github.com/Itz-fork/Fake-agent/archive/master.zip
     ```

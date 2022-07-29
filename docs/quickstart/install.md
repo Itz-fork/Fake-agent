@@ -3,7 +3,7 @@
 - [Bleeding edge](#bleeding-edge)
 
 ## Stable
-Install latest stable release from pypi registry
+Install latest stable release from [pypi](https://pypi.org/project/fake-agent)
 ```
 pip3 install -U fake-agent
 ```
