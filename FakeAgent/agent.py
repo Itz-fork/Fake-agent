@@ -57,72 +57,91 @@ class Fake_Agent:
         brdict = self._read_json_as_dict(
             f"{self.data_location}{choice(self._get_supported_browsers())}.json") if mix_browsers else self.json_file
         chosen = choice(list(brdict.values()))
-        return self._get_ua_data(chosen) if with_details else chosen
+        return self.get_ua_details(chosen) if with_details else chosen
 
-    def chrome(self, as_gen: bool = False):
+    def chrome(self, is_random: bool = False, as_gen: bool = False):
         """
         Get chrome user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.CHROME, as_gen)
+        ual = self.get(Browsers.CHROME, as_gen)
+        return choice(list(ual)) if is_random else ual
 
-    def firefox(self, as_gen: bool = False):
+    def firefox(self, is_random: bool = False, as_gen: bool = False):
         """
         Get firefox user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.FIREFOX, as_gen)
+        ual = self.get(Browsers.FIREFOX, as_gen)
+        return choice(list(ual)) if is_random else ual
 
-    def edge(self, as_gen: bool = False):
+    def edge(self, is_random: bool = False, as_gen: bool = False):
         """
         Get edge user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.EDGE, as_gen)
+        ual = self.get(Browsers.EDGE, as_gen)
+        return choice(list(ual)) if is_random else ual
 
-    def opera(self, as_gen: bool = False):
+    def opera(self, is_random: bool = False, as_gen: bool = False):
         """
         Get opera user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.OPERA, as_gen)
+        ual = self.get(Browsers.OPERA, as_gen)
+        return choice(list(ual)) if is_random else ual
 
-    def safari(self, as_gen: bool = False):
+    def safari(self, is_random: bool = False, as_gen: bool = False):
         """
         Get safari user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.SAFARI, as_gen)
+        ual = self.get(Browsers.SAFARI, as_gen)
+        return choice(list(ual)) if is_random else ual
 
-    def internet_explorer(self, as_gen: bool = False):
+    def internet_explorer(self, is_random: bool = False, as_gen: bool = False):
         """
         Get internet explorer user agents as a list or generator
 
         ### Arguments
 
-            - `as_gen` :bool (optional) - Pass "True" if you want to return value as a generator rather than a list
+            - `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
+            - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
-        return self.get(Browsers.IE, as_gen)
+        ual = self.get(Browsers.IE, as_gen)
+        return choice(list(ual)) if is_random else ual
 
     def _get_supported_browsers(self):
         return [v.value for k, v in Browsers.__dict__.items() if k.isupper()]
 
-    def _get_ua_data(self, ua):
+    def get_ua_details(self, ua: str):
+        """
+        Get details of an user agent
+
+        ### Arguments
+
+            - `ua` :str - User agent
+        """
         resp = requests.get(
             f"http://useragentstring.com/?uas={ua}&getJSON=all").json()
         resp["agent"] = ua

@@ -4,6 +4,7 @@ These methods are used to get user agents of a specific browser easily. Under th
 ## Arguments
 All of thse methods accept following arguments,
 
+- `is_random` :bool (optional) - Return a random user agent. Defaults to `False`
 - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
 
 ## Methods
