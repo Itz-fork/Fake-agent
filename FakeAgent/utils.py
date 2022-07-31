@@ -12,9 +12,11 @@ def update_database():
     """
     BROWSERS = ["Chrome", "Firefox", "Edge",
                 "Opera", "Safari", "Internet Explorer"]
-
+    
+    print("Starting to update local database...\n")
+    
     for browser in BROWSERS:
-        print(f"[+] Scraping {browser}")
+        print(f"\r[+] Scraping: {browser}", end="")
 
         resp = get(
             f"http://useragentstring.com/pages/useragentstring.php?name={browser}")
@@ -29,7 +31,6 @@ def update_database():
         with open("{}/data/{}.json".format(dirname(__file__), browser.replace(" ", "")), 'w') as f:
             dump(to_wrtie, f, indent=4)
 
-        print(
-            f"[✅] Done adding {len(agents)} of {browser} user agents to the local database!\n\n")
+        print(f"\x1b[2K\r[✅] Added: {len(agents)} of {browser} user agents")
 
     print("\n User-agents database has been updated! \n")
