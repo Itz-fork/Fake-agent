@@ -38,7 +38,7 @@ class Fake_Agent:
             - `as_gen` :bool (optional) - Return value as a generator rather than a list. Defaults to `False`
         """
         to_use = browser.value if browser else self.browser.value
-        vl = self.json_file if self.json_file else self._read_json_as_dict(
+        vl = self.json_file if (self.browser == browser and self.json_file) else self._read_json_as_dict(
             f"{self.data_location}{to_use}.json")
         if as_gen:
             return (val for val in vl.values())

@@ -2,4 +2,4 @@
 
 from .agent import Fake_Agent
 
-__version__ = "v0.1.3"
+__version__ = "v0.1.4"
