@@ -25,7 +25,7 @@ def update_database():
         for ul in soup.find_all("div", attrs={"id": "liste"}):
             for li in ul.find_all("ul"):
                 for item in li.find_all("li"):
-                    agents.append(item.text)
+                    agents.append(item.text.strip())
 
         to_wrtie = {num: agent for num, agent in enumerate(agents)}
         with open("{}/data/{}.json".format(dirname(__file__), browser.replace(" ", "")), 'w') as f:
